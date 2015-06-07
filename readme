@@ -1,0 +1,6 @@
+Install MongoDB > run mongod > run mongo
+
+npm install
+
+run index.js
+check http://localhost:9000
