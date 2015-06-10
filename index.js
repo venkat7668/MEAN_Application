@@ -14,11 +14,15 @@ user.save(function(err){
 });
 
 //routes
-server.get('/',function(req,res){
+/*server.get('/',function(req,res){
     DB.User.find(function(err,doc){
         res.send(doc);
     });
-});
+});*/
+server.get('/', restify.serveStatic({
+    directory: __dirname + '/static',
+    default : 'index.html'
+}));
 
 
 server.listen(9000);
